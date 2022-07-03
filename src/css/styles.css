@@ -1,0 +1,103 @@
+/*Card Component Styles*/
+
+.card{
+    background-color: var(--dark-blue-color);
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    width: 320px;
+    height: 340px;
+    border-radius: 20px;
+    margin:auto;
+    text-align: center;
+}
+
+.card-budgetContainer_button{
+    font-weight: 700;
+    background-color: var(--light-blue-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border:none;
+    border-radius: 50%;
+}
+
+.card-budgetContainer_button:hover{
+    background-color: var(--very-dark-blue-color);
+    cursor: pointer;
+}
+
+.budget_star{
+    margin: 25px;
+}
+
+.card-content{
+    margin: 25px;
+}
+
+.card-content_left{
+    text-align: left;
+}
+
+.card-title{
+    margin:0;
+}
+
+/*Ratelist Components Styles*/
+
+.card-rateList{
+    display: flex;
+    justify-content: center;
+}
+
+.rateList_button{
+    margin:9px
+}
+
+.rateList_button:hover {
+    color:var(--white-color);
+    background-color: var(--orange-color);
+}
+
+.rateList_button:focus{
+    color:var(--white-color);
+    background-color: var(--light-grey-color);
+}
+
+/*Submit Button Styles*/
+
+.submit-label{
+    text-transform: uppercase;
+    letter-spacing: 2px; /*new property*/
+    background-color: var(--orange-color);
+    width: 85%;
+    height: 40px;
+    border-radius: 50px;
+    margin:10px
+}
+
+.submit-label:hover{
+    color:var(--orange-color);
+    background-color: var(--white-color);
+}
+
+/**
+* THANK YOU! - PAGE
+*/
+
+/*Thank You Budget*/
+
+.card-budgetContainer_img{
+    margin-top: 40px;
+}
+
+.ratingResult-label {
+    color: var(--orange-color);
+    font-weight: 700;
+    background-color: var(--light-blue-color);
+    width:180px;
+    height: 28px;
+    border-radius: 50px;
+    margin-top: 12px;
+}

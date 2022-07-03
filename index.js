@@ -9,17 +9,11 @@ const vm = Vue.createApp({
     `
     <card-template
         :budget="ratingPage.budget"
+        :budgetImg="true"
         :title="ratingPage.title"
         :description="ratingPage.description"
         :rateList="ratingPage.rateList"
         :buttonLabel="ratingPage.buttonLabel"
-    ></card-template>
-
-    <card-template
-        :budget="submitPage.budget"
-        :title="submitPage.title"
-        :label="submitPage.label"
-        :description="submitPage.description"
     ></card-template>
     `,
     mounted() {
@@ -30,3 +24,17 @@ const vm = Vue.createApp({
     }
 
 })
+
+/**
+    <card-template
+        :budget="submitPage.budget"
+        :title="submitPage.title"
+        :label="submitPage.label"
+        :description="submitPage.description"
+        :rateResultValues="[4,5]"
+    ></card-template>
+ */
+
+/**
+* Template de rating
+ */
