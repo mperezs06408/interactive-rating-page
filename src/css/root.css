@@ -26,6 +26,9 @@ html, body{
     background-color: var(--very-dark-blue-color);
     width: 100vw;
     height: 100vh;
+    padding:0;
+    border:none;
+    margin:0;
 }
 
 h1, .submit-label {   

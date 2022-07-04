@@ -1,5 +1,6 @@
 vm.component('card-template', {
     props: [
+        'visibilityState',
         'budget',
         'budgetImg',
         'title',
@@ -10,11 +11,13 @@ vm.component('card-template', {
         'buttonLabel'
     ],
     data() {
-        return{}
+        return{
+            ratingValue: -1,
+        }
     },
     template:
     `
-    <section class="card">
+    <section class="card" :class="visibleStyle">
         <div v-if="budgetImg == true">
             <div class="card-budgetContainer_button budget_star">
                 <img class="budgetContainer_img" :src="budget" />
@@ -39,21 +42,37 @@ vm.component('card-template', {
                 v-for="rate in rateList"
             >
             <button-component
+                @click="toggleValue(rate)"
                 :label="rate"
                 :className="['card-budgetContainer_button','rateList_button']"
-            ></button-component
+            ></button-component>
             </li>
         </ul>
         <button-component
+            @click="result"
             :label="buttonLabel"
             :className="['submit-label']"
         ></button-component>
         </div>
     </section>
     `,
+    methods: {
+        result(){
+            if (this.ratingValue != -1) {
+                this.$emit('result', this.ratingValue);
+            }
+         },
+         toggleValue(value){
+            this.ratingValue = value;
+            console.log(value);
+         }
+    },
     computed: {
         ratingResult() {
             return `You selected ${ this.rateResultValues[0] } out of ${ this.rateResultValues[1]}`;
+        },
+        visibleStyle() {
+            return this.visibilityState ? ['visible'] : ['hidde']
         }
-    }
+    },
 })

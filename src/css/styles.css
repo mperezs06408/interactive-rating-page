@@ -1,7 +1,20 @@
+/*Component visibility*/
+
+.visible{
+    visibility: visible;
+}
+
+
+.hidde{
+    display: none;
+    visibility: hidden;
+}
+
+
 /*Card Component Styles*/
 
 .card{
-    background-color: var(--dark-blue-color);
+    background-image: radial-gradient(circle at top ,var(--light-blue-color) 15px,var(--dark-blue-color) 80%);
     position: absolute;
     top:0; left:0; right:0; bottom:0;
     width: 320px;

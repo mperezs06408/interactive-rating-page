@@ -9,9 +9,5 @@
     "json": "json-server --watch data/db.json"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "json-server": "^0.17.0",
-    "live-server": "^1.2.2"
-  }
+  "license": "ISC"
 }
